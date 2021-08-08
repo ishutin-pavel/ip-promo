@@ -1,24 +1,24 @@
+/*
+ * IP Promo Block
+ * https://github.com/ishutin-pavel/ip-promo
+ */
 .ip-promo {
-  position: relative;
+  padding: 15px;
+  background: url(images/ip-promo.jpg) center right no-repeat;
+  background-size: cover;
+  outline: 1px rgba(255,255,255,.5) solid;
+  outline-offset: -10px;
 }
 .ip-promo__wrap {
-  position: absolute;
-  top: 50%;
-  left: 40px;
-  transform: translate(0,-50%);
-  z-index: 2;
+  margin: 50px auto 50px auto;
+  padding: 30px 15px;
+  max-width: 340px;
   background: rgba(255,255,255,.8);
-  width: 340px;
-  padding: 30px;
 }
-  @media (max-width: 640px) {
+  @media (min-width: 640px) {
     .ip-promo__wrap {
-      position: relative;
-      top: unset;
-      left: unset;
-      right: unset;
-      bottom: unset;
-      transform: unset;
+      margin: 50px auto 50px 30px;
+      padding: 30px;
     }
   }
 .ip-promo__title {
@@ -63,13 +63,14 @@
   background: url(images/ip-promo__list.png) no-repeat left 4px;
 }
 .ip-promo__img {
+  display: none;
   position: relative;
   z-index: 1;
   outline: 1px rgba(255,255,255,.5) solid;
   outline-offset: -10px;
 }
-@media (max-width: 640px) {
+@media (min-width: 640px) {
   .ip-promo__img {
-      display: none;
+      display: block;
   }
 }
